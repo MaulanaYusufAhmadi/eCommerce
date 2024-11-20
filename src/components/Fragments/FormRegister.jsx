@@ -26,6 +26,13 @@ const FormRegister = () => {
         htmlFor="password"
         name="password"
       />
+      <InputForm
+        label="Cofirm Password"
+        type="password"
+        placeholder="*******"
+        htmlFor="comfirmPassword"
+        name="confirmPassword"
+      />
       <Button type="submit" variant="btn-sm w-full">
         Register
       </Button>

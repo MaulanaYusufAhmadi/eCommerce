@@ -6,6 +6,7 @@ const Input = (props) => {
       className="text-sm border rounded w-full text-black py-2 px-3"
       placeholder={placeholder}
       name={name}
+      id={name}
     />
   );
 };
