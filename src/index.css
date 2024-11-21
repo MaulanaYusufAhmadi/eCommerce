@@ -3,14 +3,16 @@
 @tailwind utilities;
 
 @layer base {
-
+ body{
+    @apply font-body
+ }
 }
 
 @layer components {
     .btn-sm {
-        @apply bg-primary_2 text-white font-semibold px-6 py-2 rounded-md hover:bg-secondary_2 hover:text-primary_2
+        @apply bg-primary_2 text-white font-semibold px-6 py-2 rounded-md hover:bg-secondary_2 hover:text-primary_2 transition hover:scale-105
     } 
     .btn {
-        @apply bg-primary_2 text-white font-semibold px-8 py-4 rounded-md hover:bg-secondary_2 hover:text-primary_2
+        @apply bg-primary_2 text-white font-semibold px-8 py-4 rounded-md hover:bg-secondary_2 hover:text-primary_2 transition hover:scale-105
     } 
 }
