@@ -1,31 +1,32 @@
 const CardProduct = (props) => {
-    const { children } = props;
+  const { children } = props;
   return (
-    <a
+    <div
       className="w-full max-w-sm bg-secondary_1 border rounded-lg border-secondary_1 mx-2"
-      href="#"
     >
       {children}
-    </a>
+    </div>
   );
 };
 
 const Header = (props) => {
   const { src } = props;
-    return (
+  return (
     <a href="#">
-      <img
-        src={src}
-        alt="chair 1"
-        className="mx-auto mt-10 my-6 hover:scale-105 transition duration-500"
-      />
+      <div className="w-full h-80 max-w-sm">
+        <img
+          src={src}
+          alt="chair 1"
+          className="mx-auto mt-10 my-6 object-cover hover:scale-105 transition duration-500"
+        />
+      </div>
     </a>
   );
 };
 const Body = (props) => {
-    const { children, title, price } = props;
+  const { children, title, price } = props;
   return (
-    <div className="px-5 pb-10">
+    <div className="px-5 pb-8">
       <a href="#" className="flex flex-col space-y-4">
         <h5 className="text-xl font-semibold tracking-tight text-primary_2">
           {title}

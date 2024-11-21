@@ -3,8 +3,15 @@ import Button from "../Elements/Button";
 import InputForm from "../Elements/Input";
 
 const FormLogin = () => {
+  const handleLogin = (event) => {
+    event.preventDefault();
+    localStorage.setItem("username", event.target.username.value);
+    localStorage.setItem("password", event.target.password.value);
+    window.location.href = "/products";
+  };
+
   return (
-    <form action="">
+    <form onSubmit={handleLogin}>
       <InputForm
         label="Username"
         type="text"
