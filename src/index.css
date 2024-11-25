@@ -2,17 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
 @layer base {
- body{
-    @apply font-body
- }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-body;
+  }
 }
 
 @layer components {
-    .btn-sm {
-        @apply bg-primary_2 text-white font-semibold px-6 py-2 rounded-md hover:bg-secondary_2 hover:text-primary_2 transition hover:scale-105
-    } 
-    .btn {
-        @apply bg-primary_2 text-white font-semibold px-8 py-4 rounded-md hover:bg-secondary_2 hover:text-primary_2 transition hover:scale-105
-    } 
+  .btn-sm {
+    @apply bg-primary_2 text-white font-semibold px-6 py-2 rounded-md hover:bg-secondary_2 hover:text-primary_2 transition hover:scale-105;
+  }
+  .btn {
+    @apply bg-primary_2 text-white font-semibold px-8 py-4 rounded-md hover:bg-secondary_2 hover:text-primary_2 transition hover:scale-105;
+  }
 }
