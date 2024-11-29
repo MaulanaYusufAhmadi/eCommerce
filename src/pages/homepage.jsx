@@ -1,6 +1,73 @@
 import Navbar from "../components/Fragments/Navbar";
 import Home from "../components/Fragments/Home";
 import Button from "../components/Elements/Button";
+import CardProduct from "../components/Fragments/CardProduct";
+
+const products = [
+  {
+    id: 1,
+    title: "Armchair",
+    description: "Light single chair",
+    price: "145",
+    rating: "4.9",
+    background: "bg-secondary_1",
+    src: "/images/chair_1.png",
+  },
+  {
+    id: 2,
+    title: "Minimal Sofa",
+    description: "Light single chair",
+    price: "100",
+    rating: "4.5",
+    background: "bg-secondary_2",
+    src: "/images/chair_2.png",
+  },
+  {
+    id: 3,
+    title: "Premium Sofa",
+    description: "Light single chair",
+    price: "150",
+    rating: "3.9",
+    background: "bg-secondary_3",
+    src: "/images/chair_3.png",
+  },
+  {
+    id: 4,
+    title: "Dining Chair",
+    description: "Light single chair",
+    price: "80",
+    rating: "4.7",
+    background: "bg-secondary_4",
+    src: "/images/chair_1.png",
+  },
+  {
+    id: 5,
+    title: "Big Sofa",
+    description: "Light single chair",
+    price: "200",
+    rating: "4.2",
+    background: "bg-secondary_1",
+    src: "/images/chair_2.png",
+  },
+  {
+    id: 6,
+    title: "Big Sofa",
+    description: "Light single chair",
+    price: "200",
+    rating: "4.2",
+    background: "bg-secondary_3",
+    src: "/images/chair_2.png",
+  },
+  {
+    id: 7,
+    title: "Big Sofa",
+    description: "Light single chair",
+    price: "200",
+    rating: "4.2",
+    background: "bg-secondary_4",
+    src: "/images/chair_2.png",
+  },
+];
 
 const categories = [
   { name: "Living Room", href: "#", current: false },
@@ -9,12 +76,12 @@ const categories = [
   { name: "Dining Room", href: "#", current: false },
   { name: "Office", href: "#", current: false },
   { name: "Outdoor", href: "#", current: false },
-  { name: "Outdoor", href: "#", current: false },
-  { name: "Outdoor", href: "#", current: false },
-  { name: "Outdoor", href: "#", current: false },
-  { name: "Outdoor", href: "#", current: false },
-  { name: "Outdoor", href: "#", current: false },
-  { name: "Outdoor", href: "#", current: false },
+  { name: "aaaa", href: "#", current: false },
+  { name: "sdssss", href: "#", current: false },
+  { name: "sasdasasas", href: "#", current: false },
+  { name: "wqwqqw", href: "#", current: false },
+  { name: "sssssss", href: "#", current: false },
+  { name: "aaaaqqqq", href: "#", current: false },
 ];
 
 function classNames(...classes) {
@@ -73,13 +140,64 @@ const HomePage = () => {
               </div>
               <Button variant="btn-sm">All Categories</Button>
             </div>
-            <div className="w-3/4 bg-gray">ss</div>
+            <div className="flex flex-col justify-center w-3/4 p-6">
+              <div className="grid grid-cols-3 grid-flow-row gap-4">
+                <div className="flex flex-col gap-3 items-center justify-center bg-secondary_2 h-56 rounded-lg">
+                  <h1 className="text-3xl font-title">Living Room</h1>
+                  <Button variant="btn-sm font-thin">Explore</Button>
+                </div>
+                <div className="flex flex-col gap-3 items-center justify-center bg-secondary_2 h-56 rounded-lg">
+                  <h1 className="text-3xl font-title">Living Room</h1>
+                  <Button variant="btn-sm font-thin">Explore</Button>
+                </div>
+                <div className="flex flex-col gap-3 items-center justify-center bg-secondary_2 h-56 rounded-lg">
+                  <h1 className="text-3xl font-title">Living Room</h1>
+                  <Button variant="btn-sm font-thin">Explore</Button>
+                </div>
+                <div className="flex flex-col gap-3 items-center justify-center bg-secondary_2 h-56 rounded-lg">
+                  <h1 className="text-3xl font-title">Living Room</h1>
+                  <Button variant="btn-sm font-thin">Explore</Button>
+                </div>
+                <div className="flex flex-col gap-3 items-center justify-center bg-secondary_2 h-56 rounded-lg">
+                  <h1 className="text-3xl font-title">Living Room</h1>
+                  <Button variant="btn-sm font-thin">Explore</Button>
+                </div>
+                <div className="flex flex-col gap-3 items-center justify-center bg-secondary_2 h-56 rounded-lg">
+                  <h1 className="text-3xl font-title">Living Room</h1>
+                  <Button variant="btn-sm font-thin">Explore</Button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="products">
-        <div className="bg-secondary_4 flex items-center justify-center min-h-screen"></div>
+        <div className="relative bg-secondary_5 min-h-screen">
+          <div className="absolute z-0 -left-56">
+            <img
+              src="/images/chair_2.png"
+              className="min-h-screen "
+              alt="kursi"
+            />
+          </div>
+          <div className="flex flex-col z-10">
+            <h1 className="text-5xl z-10 font-bold text-primary_1 mx-auto my-10 font-title">
+              Popular Products
+            </h1>
+            <div className="flex w-7/8 overflow-x-scroll ml-40 space-x-4 z-10">
+              {products.map((product) => (
+                <CardProduct key={product.id} background={product.background}>
+                  <CardProduct.Header src={product.src} />
+                  <CardProduct.Body title={product.title} price={product.price}>
+                    {product.description}
+                  </CardProduct.Body>
+                </CardProduct>
+              ))}
+            </div>
+            <Button variant="btn-sm z-10 mx-auto my-10">Explore all items</Button>
+          </div>
+        </div>
       </section>
     </div>
   );

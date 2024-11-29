@@ -1,8 +1,8 @@
 const CardProduct = (props) => {
-  const { children } = props;
+  const { children, background } = props;
   return (
     <div
-      className="w-full max-w-sm bg-secondary_1 border rounded-lg border-secondary_1 mx-2"
+      className={`w-full max-w-sm rounded-lg mx-21 my-5 ${background}`}
     >
       {children}
     </div>
@@ -13,11 +13,11 @@ const Header = (props) => {
   const { src } = props;
   return (
     <a href="#">
-      <div className="w-full h-80 max-w-sm">
+      <div className="w-60 h-60 max-w-sm">
         <img
           src={src}
           alt="chair 1"
-          className="mx-auto mt-10 my-6 object-cover hover:scale-105 transition duration-500"
+          className="mx-auto h-60 mt-10 my-6 object-cover hover:scale-105 transition duration-500"
         />
       </div>
     </a>
