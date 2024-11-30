@@ -195,10 +195,177 @@ const HomePage = () => {
                 </CardProduct>
               ))}
             </div>
-            <Button variant="btn-sm z-10 mx-auto my-10">Explore all items</Button>
+            <Button variant="btn-sm z-10 mx-auto my-10">
+              Explore all items
+            </Button>
           </div>
         </div>
       </section>
+
+      <section id="about">
+        <div className="flex flex-col items-center justify-center px-20 py-12 bg-secondary_2">
+          <h1 className="text-5xl font-bold text-primary_1 mx-auto mb-10 font-title">
+            Benefit for your expediency
+          </h1>
+          <div className="grid grid-cols-3 space-x-8">
+            <div className="h-full w-80 p-10">
+              <div className="mx-auto bg-secondary_3 h-20 w-20 rounded-md p-4">
+                <img src="/icons/money.png" alt="money" />
+              </div>
+              <h5 className="text-xl font-bold text-primary_1 text-center mx-auto my-4 font-title">
+                Payment Method
+              </h5>
+              <p className="text-center text-sm font-thin text-primary_1">
+                We accept all major credit and debit cards
+              </p>
+            </div>
+            <div className="h-full w-80 p-10">
+              <div className="mx-auto bg-secondary_4 h-20 w-20 rounded-md p-4">
+                <img src="/icons/send.png" alt="send" />
+              </div>
+              <h5 className="text-xl font-bold text-primary_1 text-center mx-auto my-4 font-title">
+                Return Policy
+              </h5>
+              <p className="text-center text-sm font-thin text-primary_1">
+                You can return the product within 7 days
+              </p>
+            </div>
+            <div className="h-full w-80 p-10">
+              <div className="mx-auto bg-secondary_1 h-20 w-20 rounded-md p-4">
+                <img src="/icons/headphone.png" alt="send" />
+              </div>
+              <h5 className="text-xl font-bold text-primary_1 text-center mx-auto my-4 font-title">
+                Custumer Support
+              </h5>
+              <p className="text-center text-sm font-thin text-primary_1">
+                We are here to help you 24/7
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="relative bg-secondary_5 pb-8">
+          <div className="flex flex-col items-center justify-center p-10">
+            <h1 className="text-5xl font-bold text-primary_1 mx-auto mb-8 font-title">
+              Testimonials
+            </h1>
+            <h6 className="text-xl font-thin text-primary_1">
+              Over 1500+ happy customers
+            </h6>
+          </div>
+          <div className="flex justify-between py-10 mx-40">
+            <div className="bg-gray h-72 w-72 rounded-md" />
+            <div className="mx-auto my-auto w-1/2">
+              <h6 className="text-xl font-thin text-primary_1">
+                “My experience with Mark is a complete sucess, from customer
+                service, wide range of products, clean store, purchasing
+                experience, the newsletter.Thank you.”
+              </h6>
+              <h6 className="text-md font-bold mt-10 text-primary_1">
+                Maria Hill
+              </h6>
+              <h6 className="text-sm font-thin text-primary_1">
+                CEO of ABC Company
+              </h6>
+            </div>
+            <div className="flex flex-col space-y-2 justify-center">
+              <div className="flex items-center justify-center p-1 bg-secondary_2 rounded-full w-6 h-6">
+                <img src="/icons/back.png" className="w-2 h-auto" alt="" />
+              </div>
+              <div className="flex items-center justify-center p-1 bg-secondary_3 rounded-full w-6 h-6">
+                <img src="/icons/front.png" className="w-2 h-auto" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div className="flex bg-secondary_2">
+          <div className="w-1/2 bg-gray"></div>
+          <div className="w-1/2 text-secondary_1 px-40 py-20">
+            <h1 className="text-4xl font-thin text-primary_1 mx-auto font-title">
+              Join Our
+            </h1>
+            <h1 className="text-4xl font-bold text-primary_1 mx-auto mb-2 font-title">
+              Newsletter
+            </h1>
+            <h5 className="text-md font-medium text-primary_1 mx-auto font-title">
+              Receive exclusive deals, discounts and many offers.
+            </h5>
+            <form action="">
+              <input
+                type="email"
+                className="text-sm mt-6 mb-4 rounded w-full text-black py-2 px-3"
+                placeholder="Enter your email"
+              />
+              <Button variant="btn-sm">Subscribe</Button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer className="relative bg-secondary_5 py-14 px-32">
+        <div className="flex justify-between">
+          <div className="flex flex-col space-y-3">
+            <img src="/images/Logo.png" className="w-24 h-auto" alt="" />
+            <div className="grid grid-cols-5 gap-4 pl-1">
+              <a href="">
+                <img src="/icons/facebook.png" className="w-5 h-auto" alt="" />
+              </a>
+              <a href="">
+                <img src="/icons/dribble.png" className="w-5 h-auto" alt="" />
+              </a>
+              <a href="">
+                <img src="/icons/instagram.png" className="w-5 h-auto" alt="" />
+              </a>
+              <a href="">
+                <img src="/icons/twitter.png" className="w-5 h-auto" alt="" />
+              </a>
+              <a href="">
+                <img src="/icons/linkdin.png" className="w-5 h-auto" alt="" />
+              </a>
+            </div>
+            <p className="text-sm font-medium text-primary_1">Address</p>
+            <p className="text-xs font-thin text-primary_1">+123 456 789</p>
+            <p className="text-xs font-thin text-primary_1">
+              s6F8s@example.com
+            </p>
+          </div>
+          <div className="flex flex-col space-y-4">
+            <p className="text-xs font-bold text-primary_1">My Account</p>
+            <div className="flex flex-col space-y-1">
+            <a href="#" className="text-xs font-thin text-primary_1">Sign In</a>
+            <a href="#" className="text-xs font-thin text-primary_1">Register</a>
+            <a href="#" className="text-xs font-thin text-primary_1">Order Status</a>
+            </div>
+          </div>
+          <div className="flex flex-col space-y-4">
+            <p className="text-xs font-bold text-primary_1">Help</p>
+            <div className="flex flex-col space-y-1">
+            <a href="#" className="text-xs font-thin text-primary_1">Shipping</a>
+            <a href="#" className="text-xs font-thin text-primary_1">Return</a>
+            <a href="#" className="text-xs font-thin text-primary_1">Sizing</a>
+            </div>
+          </div>
+          <div className="flex flex-col space-y-4">
+            <p className="text-xs font-bold text-primary_1">Shop</p>
+            <div className="flex flex-col space-y-1">
+            <a href="#" className="text-xs font-thin text-primary_1">All Product</a>
+            <a href="#" className="text-xs font-thin text-primary_1">Bedroom</a>
+            <a href="#" className="text-xs font-thin text-primary_1">Living Room</a>
+            </div>
+          </div>
+          <div className="flex flex-col space-y-4">
+            <p className="text-xs font-bold text-primary_1">Legal Stuff</p>
+            <div className="flex flex-col space-y-1">
+            <a href="#" className="text-xs font-thin text-primary_1">Shipping & Delivery</a>
+            <a href="#" className="text-xs font-thin text-primary_1">Term & Conditions</a>
+            <a href="#" className="text-xs font-thin text-primary_1">Privacy & Policy</a>
+            </div>
+          </div>
+        </div>
+        <p className="absolute bottom-2 text-sm font-thin text-primary_1">&copy; Copyright 2022. All Rights Reserved</p>
+      </footer>
     </div>
   );
 };
